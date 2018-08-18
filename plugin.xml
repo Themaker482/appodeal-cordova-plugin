@@ -18,14 +18,14 @@
                 <param name="android-package" value="com.appodeal.plugin.AppodealPlugin"/>
             </feature>
         </config-file>
-        <config-file parent="/manifest" target="AndroidManifest.xml">
+        <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest" mode="merge">
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 			<uses-permission android:name="android.permission.INTERNET" />
 			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional -->
 			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!--optional -->
 			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!--optional-->
         </config-file>
-        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+        <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest" mode="merge">
 			<activity android:name="com.appodeal.ads.InterstitialActivity"
 				android:configChanges="orientation|screenSize"
 				android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
@@ -273,28 +273,26 @@
 				android:enabled="true"
 				android:exported="true" />
         </config-file>
-        <config-file parent="/manifest/application" target="AndroidManifest.xml">
-        
-        </config-file>
+      
         
         <framework src="com.google.android.gms:play-services-ads:10+" />
 
-        <source-file src="src/android/AppodealPlugin.java" target-dir="src/com/appodeal/plugin" />
+        <source-file src="src/android/AppodealPlugin.java" target-dir="app/src/main/com/appodeal/plugin" />
     	<framework src="src/android/dependency_fix.gradle" custom="true" type="gradleReference" />
-        <source-file src="libs/Android/appodeal-2.1.11.jar" target-dir="libs" />
-        <source-file src="libs/Android/appodeal-banner-view-2.3.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/applovin-7.5.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/chartboost-6.6.3.jar" target-dir="libs" />
-        <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="libs" />
-        <source-file src="libs/Android/ogury-2.1.15.jar" target-dir="libs" />
-        <source-file src="libs/Android/picasso-2.5.2.jar" target-dir="libs" />
-        <source-file src="libs/Android/mailru-4.6.17.jar" target-dir="libs" />
-        <source-file src="libs/Android/unity_ads-2.1.0.jar" target-dir="libs" />
-        <source-file src="libs/Android/yandex-metrica-2.73.jar" target-dir="libs" />
-    	<source-file src="libs/Android/startapp-3.6.7.jar" target-dir="libs" />
-		<source-file src="libs/Android/mobvista_alphab.jar" target-dir="libs" />
-		<source-file src="libs/Android/mobvista_appwallext.jar" target-dir="libs" />
-		<source-file src="libs/Android/mobvista_mvjscommon.jar" target-dir="libs" />
+        <source-file src="libs/Android/appodeal-2.1.11.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/appodeal-banner-view-2.3.0.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/applovin-7.5.0.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/chartboost-6.6.3.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/inmobi-6.2.3.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/ogury-2.1.15.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/picasso-2.5.2.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/mailru-4.6.17.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/unity_ads-2.1.0.jar" target-dir="app/src/main/libs" />
+        <source-file src="libs/Android/yandex-metrica-2.73.jar" target-dir="app/src/main/libs" />
+    	<source-file src="libs/Android/startapp-3.6.7.jar" target-dir="app/src/main/libs" />
+		<source-file src="libs/Android/mobvista_alphab.jar" target-dir="app/src/main/libs" />
+		<source-file src="libs/Android/mobvista_appwallext.jar" target-dir="app/src/main/libs" />
+		<source-file src="libs/Android/mobvista_mvjscommon.jar" target-dir="app/src/main/libs" />
         <framework src="libs/Android/adcolony" custom="true" />
 		<framework src="libs/Android/mobvista_appwall" custom="true" />
 		<framework src="libs/Android/mobvista_common" custom="true" />
